@@ -5,6 +5,10 @@
     user-select: none;
 }
 
+.highlight *{
+    font-family:Consolas, 'Courier New', monospace;
+}
+
 .highlight .name {
     color: #22863a;
 }
