@@ -89,11 +89,11 @@ body[data-color-scheme="auto"] nav .nav-item-github, body[data-color-scheme="lig
 }
 
 body[data-color-scheme="auto"] nav .nav-item-patreon, body[data-color-scheme="light"] nav .nav-item-patreon {
-    background-image: url(/theme-img/patreon-logo-black.png);
+    background-image: url(/theme-img/bilibili-logo-black.svg);
 }
 
 body[data-color-scheme="auto"] nav .nav-item-codepen, body[data-color-scheme="light"] nav .nav-item-codepen {
-    background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png);
+    background-image: url(/theme-img/webdav-logo-black.svg);
 }
 
 body[data-color-scheme="auto"] nav .nav-item-mastodon, body[data-color-scheme="light"] nav .nav-item-mastodon {
@@ -109,10 +109,10 @@ body[data-color-scheme="auto"] nav .nav-item-discord, body[data-color-scheme="li
         background-image: url(/theme-img/github-mark-light.png);
     }
     body[data-color-scheme="auto"] nav .nav-item-patreon {
-        background-image: url(/theme-img/patreon-logo-white.png);
+        background-image: url(/theme-img/bilibili-logo-white.svg);
     }
     body[data-color-scheme="auto"] nav .nav-item-codepen {
-        background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
+        background-image: url(/theme-img/webdav-logo-white.svg);
     }
     body[data-color-scheme="auto"] nav .nav-item-mastodon {
         background-image: url(/theme-img/mastodon-logo-white.svg);
@@ -127,11 +127,11 @@ body[data-color-scheme="dark"] nav .nav-item-github {
 }
 
 body[data-color-scheme="dark"] nav .nav-item-patreon {
-    background-image: url(/theme-img/patreon-logo-white.png);
+    background-image: url(/theme-img/bilibili-logo-white.svg);
 }
 
 body[data-color-scheme="dark"] nav .nav-item-codepen {
-    background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
+    background-image: url(/theme-img/webdav-logo-white.svg);
 }
 
 body[data-color-scheme="dark"] nav .nav-item-mastodon {
