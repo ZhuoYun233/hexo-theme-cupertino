@@ -52,10 +52,12 @@
         <%- page.content %>
     </div>
 
-    <div class="about">
-        <h1><%= __('about_this_post') %></h1>
-        <p><%- __('this_post_is_written_by', config.author) %>.</p>
-    </div>
+    <% if (!page.no_about) { %>
+        <div class="about">
+            <h1><%= __('about_this_post') %></h1>
+            <p><%- __('this_post_is_written_by', config.author) %>.</p>
+        </div>
+    <% } %>
 
     <% if (!page.no_comments) { %>
         <% if (config.waline) { %>
