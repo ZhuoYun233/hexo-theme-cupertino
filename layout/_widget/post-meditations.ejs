@@ -12,7 +12,7 @@
         
         <div class="post-list">
             <% site.posts.each(function (post) { %>
-                <% if (Object.values(post.categories.data[0])[0] === 'Meditation') { %>
+                <% if (post.categories && post.categories.length && !is_category() && Object.values(post.categories.data[0])[0] === 'Meditation') { %>
                     <%- partial('_widget/post-list-item',{post}) %>
                 <% } %>
             <% }) %>

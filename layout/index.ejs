@@ -14,11 +14,11 @@
         <% page.posts.each(function (post) { %>
             <!-- Meditations won't be shown on home page -->
             <% if (page.path == "index.html") { %>
-                <% if (Object.values(post.categories.data[0])[0] === 'Meditation') { %>
+                <% if (post.categories && post.categories.length && !is_category() && Object.values(post.categories.data[0])[0] === 'Meditation') { %>
                     <!-- Do nothing -->
                 <% }else{ %>
                     <%- partial('_widget/post-list-item',{post}) %>
-                <% }%>
+                <% } %>
             <!-- But will be shown in other index-layout pages like archives -->
             <% }else{ %>
                 <%- partial('_widget/post-list-item',{post}) %>
