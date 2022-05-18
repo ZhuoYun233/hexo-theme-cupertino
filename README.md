@@ -2,7 +2,7 @@
 
 The Hexo Blog Theme Cupertino (Yun's Branch)
 
-![A screenshot](README.assets/20220510.png)
+![A screenshot](https://zhuoyun233.com/covers/20220510.png)
 
 Visit [https://zhuoyun233.com/](https://zhuoyun233.com/) to preview it.
 
