@@ -14,60 +14,14 @@
         <% page.posts.each(function (post) { %>
             <!-- Meditations won't be shown on home page -->
             <% if (page.path == "index.html") { %>
-                <% if (Object.values(post.categories.data[0])[0] === 'meditation') { %>
+                <% if (Object.values(post.categories.data[0])[0] === 'Meditation') { %>
                     <!-- Do nothing -->
                 <% }else{ %>
-                    <article class="post-list-item">
-                        <a href="<%- url_for(post.path) %>">
-                            <% if (post.cover_image) { %>
-                            <div class="cover-img">
-                                <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
-                            </div>
-                            <% } %>
-                            <div class="content">
-                                <div class="title">
-                                    <%= post.title %>
-                                </div>
-                                <% if (theme.show_excerpt) { %>
-                                <div class="excerpt">
-                                    <%- post.excerpt %>
-                                </div>
-                                <% } %>
-                                <div class="time">
-                                    <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
-                                    <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
-                                    <span><%- post.date.year() %></span>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
+                    <%- partial('_widget/post-list-item',{post}) %>
                 <% }%>
             <!-- But will be shown in other index-layout pages like archives -->
             <% }else{ %>
-                <article class="post-list-item">
-                    <a href="<%- url_for(post.path) %>">
-                        <% if (post.cover_image) { %>
-                        <div class="cover-img">
-                            <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
-                        </div>
-                        <% } %>
-                        <div class="content">
-                            <div class="title">
-                                <%= post.title %>
-                            </div>
-                            <% if (theme.show_excerpt) { %>
-                            <div class="excerpt">
-                                <%- post.excerpt %>
-                            </div>
-                            <% } %>
-                            <div class="time">
-                                <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
-                                <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
-                                <span><%- post.date.year() %></span>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+                <%- partial('_widget/post-list-item',{post}) %>
             <% }%>
         <% }) %>
     </div>

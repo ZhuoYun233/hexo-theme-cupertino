@@ -1,4 +1,15 @@
 <div class="container">
+    <div class="meta">
+        <div class="type">
+            <%= is_category() ? __('category') : '' %>
+            <%= is_tag() ? __('tag') : '' %>
+        </div>
+
+        <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>"><%= is_category() ? page.category : '' %><%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %><%= is_archive() ? __('archives') : '' %></h2>
+    </div>
+
+    <div class="divider"></div>
+
     <div class="post-list archives">
         <% page.posts.each(function (post) { %>
         <article class="post-list-item">
@@ -7,8 +18,15 @@
                 <div class="cover-img">
                     <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
                 </div>
-                <% } %>
+                <% } %>       
                 <div class="content">
+                    <% if (post.categories && post.categories.length && !is_category()) { %>
+                    <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
+                    <% post.categories.forEach((category) => { %>
+                        <span><%= category.name %></span>
+                    <% }) %>
+                    </div>
+                    <% } %>
                     <div class="title">
                         <%= post.title %>
                     </div>

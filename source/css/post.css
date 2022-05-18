@@ -6,6 +6,18 @@ body {
     margin: 128px 0;
 }
 
+.meta .categories {
+    color: var(--link);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.meta .categories a {
+    font-size: 13px;
+    margin-right: 6px;
+    text-decoration: none;
+}
+
 .meta .date {
     color: var(--grey);
     font-weight: 600;
@@ -23,7 +35,7 @@ body {
     letter-spacing: .012em;
 }
 
-.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .content table, .content video, .content ul, .content ol, .about {
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .categories, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .content table, .content video, .content ul, .content ol, .about {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -76,6 +88,11 @@ body {
     padding: 0 8px;
 }
 
+.tags .tag {
+    display: inline-block;
+    margin-right: 4px;
+}
+
 .about {
     border-radius: 7px;
     background-color: var(--body-bg);
@@ -85,4 +102,12 @@ body {
 
 .about h1 {
     margin: 0;
+}
+
+.about .details {
+    margin: 16px 0;
+}
+
+.about .details p {
+    margin: 6px 0;
 }
